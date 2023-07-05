@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>تمرینات هفته پنجم</title>
+    <link rel="stylesheet" href="css/style1.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div id="main-container" class="main-container">
+        <h2>TodoInput</h2>
+        <form id="form" class="form">
+          <div class="header-form">
+            <div class="box-input">
+              <div class="icon-text blue">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  class="w-5 h-5 icon"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M4.5 2A1.5 1.5 0 003 3.5v13A1.5 1.5 0 004.5 18h11a1.5 1.5 0 001.5-1.5V7.621a1.5 1.5 0 00-.44-1.06l-4.12-4.122A1.5 1.5 0 0011.378 2H4.5zm2.25 8.5a.75.75 0 000 1.5h6.5a.75.75 0 000-1.5h-6.5zm0 3a.75.75 0 000 1.5h6.5a.75.75 0 000-1.5h-6.5z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </div>
+              <input
+                id="newtask"
+                class="input-text"
+                type="text"
+                placeholder="New Todo"
+              />
+            </div>
+            <button type="submit" id="addnewtask" class="blue">
+              Add new task
+            </button>
+          </div>
+        </form>
+        <div id="main-form" class="main-form">
+          <h2>TodoList</h2>
+          <div class="box-option">
+            <button class="blue btn-blue" id="btn-all">All</button>
+            <button class="blue btn-blue" id="btn-done">Done</button>
+            <button class="blue btn-blue" id="btn-todo">Todo</button>
+          </div>
+          <div class="box-todo">
+            <ul id="todo-list" class="todo-list">
+              <li class="box-list">
+                <div class="list">to do1</div>
+                <div class="box-icons">
+                  <!-- <input type="checkbox" class="" id=""> -->
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="w-6 h-6 icon tik-color"
+                    id="icon-tik"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M3 3.5A1.5 1.5 0 014.5 2h6.879a1.5 1.5 0 011.06.44l4.122 4.12A1.5 1.5 0 0117 7.622V16.5a1.5 1.5 0 01-1.5 1.5h-11A1.5 1.5 0 013 16.5v-13zm10.857 5.691a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 00-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6 icon tik-color"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"
+                    />
+                  </svg>
+                  <!-- //---------------------------------------- -->
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="w-5 h-5 icon pencil-color"
+                    id="icon-pencil"
+                  >
+                    <path
+                      d="M2.695 14.763l-1.262 3.154a.5.5 0 00.65.65l3.155-1.262a4 4 0 001.343-.885L17.5 5.5a2.121 2.121 0 00-3-3L3.58 13.42a4 4 0 00-.885 1.343z"
+                    />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="w-5 h-5 icon trash-color"
+                    id="icon-trash"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M8.75 1A2.75 2.75 0 006 3.75v.443c-.795.077-1.584.176-2.365.298a.75.75 0 10.23 1.482l.149-.022.841 10.518A2.75 2.75 0 007.596 19h4.807a2.75 2.75 0 002.742-2.53l.841-10.52.149.023a.75.75 0 00.23-1.482A41.03 41.03 0 0014 4.193V3.75A2.75 2.75 0 0011.25 1h-2.5zM10 4c.84 0 1.673.025 2.5.075V3.75c0-.69-.56-1.25-1.25-1.25h-2.5c-.69 0-1.25.56-1.25 1.25v.325C8.327 4.025 9.16 4 10 4zM8.58 7.72a.75.75 0 00-1.5.06l.3 7.5a.75.75 0 101.5-.06l-.3-7.5zm4.34.06a.75.75 0 10-1.5-.06l-.3 7.5a.75.75 0 101.5.06l.3-7.5z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+              </li>
+            </ul>
+            <div class="box-delete">
+              <button id="btn-deleteDoneTasks" class="btn-red">
+                Delete done tasks
+              </button>
+              <button id="btn-alldelete" class="btn-red">
+                Delete all tasks
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="modal" class="modal">
+        <p>Are you sure to complete this action?</p>
+        <div class="option-modal">
+          <button id="modal-yes" class="btn-red">Yes</button>
+          <button id="modal-no" class="btn-red">No</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/script1.js"></script>
+  </body>
+</html>

@@ -1,0 +1,173 @@
+@font-face {
+    font-family: Vazirmatn;
+    src: url("fonts/Vazirmatn-Medium.eot"), url("fonts/Vazirmatn-Medium.woff"),
+      url("fonts/Vazirmatn-Medium.woff2 format('woff2')"),
+      url("fonts/Vazirmatn-Thin.ttf"), url("fonts/Vazirmatn-Light.ttf"),
+      url("fonts/Vazirmatn-Thin.woff2"), url("fonts/Vazirmatn-Light.woff2");
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+          font-family: Sahel;
+          src: url("fonts/Sahel.eot");
+          src: url("fonts/Sahel.eot?#iefix") format("embedded-opentype"),
+            url("fonts/Sahel.woff2") format("woff2"),
+            url("fonts/Sahel.woff") format("woff"),
+            url("fonts/Sahel.ttf") format("truetype");
+          font-weight: normal;
+        }
+  
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sahel;
+   
+  }
+  
+  body {
+    /* background-image: linear-gradient(180deg, #eee, #fff 100px, #fff); */
+    /* background-color: --bs-secondary-bg; */
+  }
+  /* a {
+    text-decoration: none;
+   
+  } */
+  
+ .icon{
+  width:20px;
+  height:20px;
+ }
+ .nav-scroller {
+  position: relative;
+  z-index: 2;
+  height: 2.75rem;
+  overflow-y: hidden;
+ 
+}
+.nav-scroller .nav {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-bottom: 1rem;
+  margin-top: -1px;
+  overflow-x: auto;
+  text-align: center;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+.top-center:hover{
+text-decoration: none;
+}
+/* .w-200{
+  width:200px;
+} */
+.text-image{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+}
+.older:focus{
+  box-shadow: 1rem .5rem 1rem blue ;
+
+}
+.about{
+  top:2rem;
+}
+.icon-slider{
+  width:20px;
+  height:20px;
+  padding:3px;
+  color:#fff;
+  background-color: black;
+}
+.icon-slider:hover{
+  background-color: red;
+}
+.end-30{
+  right:30px;
+}
+.start-30{
+  left:30px;
+}
+.top-20{
+  top:20%;
+}
+.right-20{
+right:20%;
+}
+.h-100vh{
+  height:100vh;
+}
+.none{
+  display:none;
+}
+/* //----------------writing Without animation and had problrm------------------------------------ */
+ /* .slide {
+  -webkit-transition: 1s linear;
+  transition: 1s linear;
+ 
+}
+
+ .slide-affect{
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+  
+} 
+.slideActive{
+  display: block;
+} */
+/* //-------------------------start using animation------------------------------------------ */
+.text-slide{
+  /* animation: ani 1s ease-out forwards; */
+}
+.text-slide h1{
+  opacity: 0;
+  margin:0;
+  animation:ani .75s ease-out 2s forwards;
+}
+.text-slide p{
+  opacity: 0;
+  margin:0;
+  animation:ani .75s ease-out 3s forwards;
+}
+.slide img{
+  animation:scale-img 1s ease-out 1s forwards;
+}
+.progress{
+  position: absolute;
+  top:0;
+  left:0;
+  /* width:100%; */
+  height:7px;
+  background-color: red;
+  z-index: 1;
+  animation:progress 5s linear  forwards;
+}
+@keyframes ani {
+  100% {
+    opacity: 1;
+   margin-right: 20px;
+  }
+
+}
+
+@keyframes scale-img{
+  /* 0%{
+    transform: scale(0);
+  } */
+  100%{
+    transform: scale(1.15);
+  }
+}
+@keyframes progress{
+  0%{
+   width:0 ;
+  }
+  100%{
+    width:100% ;
+  }
+}
